@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Símbolo Ápse</title>
+  <desc id="desc">Esfera vetorial verde-lima simplificada.</desc>
+  <defs>
+    <radialGradient id="orb" cx="30%" cy="22%" r="84%">
+      <stop offset="0" stop-color="#F6FFE4"/>
+      <stop offset="0.24" stop-color="#DFFF8B"/>
+      <stop offset="0.58" stop-color="#B8FF34"/>
+      <stop offset="1" stop-color="#78D000"/>
+    </radialGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="104" fill="url(#orb)"/>
+  <ellipse cx="95" cy="81" rx="52" ry="25" fill="url(#shine)" transform="rotate(-28 95 81)"/>
+</svg>
