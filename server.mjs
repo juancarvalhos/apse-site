@@ -1,9 +1,10 @@
 import { createServer } from "node:http";
-import { readFile, stat } from "node:fs/promises";
-import { join, extname } from "node:path";
+import { readFile, stat, realpath } from "node:fs/promises";
+import { join, extname, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL(".", import.meta.url));
+const ROOT_REAL = await realpath(ROOT);
 const PORT = process.env.PORT ? Number(process.env.PORT) : 5000;
 
 const MIME = {
@@ -31,8 +32,13 @@ const server = createServer(async (req, res) => {
       filePath = join(filePath, "index.html");
     }
 
-    const data = await readFile(filePath);
-    const ext = extname(filePath).toLowerCase();
+    const resolved = await realpath(filePath).catch(() => null);
+    if (!resolved || (resolved !== ROOT_REAL && !resolved.startsWith(ROOT_REAL + sep))) {
+      throw new Error("path outside root");
+    }
+
+    const data = await readFile(resolved);
+    const ext = extname(resolved).toLowerCase();
     res.writeHead(200, {
       "Content-Type": MIME[ext] || "application/octet-stream",
       "Cache-Control": "no-cache, must-revalidate",
