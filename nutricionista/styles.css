@@ -1,0 +1,223 @@
+/* ============================================================
+   Landing page: nutricionistas
+   Usa os tokens e componentes de ../assets/css/styles.css
+   (--apse-lime, --apse-off-white, --apse-graphite, .btn, .panel, .section-eyebrow)
+   ============================================================ */
+
+.nutri-hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px 20px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.nutri-hero h1 {
+  font-size: clamp(30px, 6vw, 44px);
+  line-height: 1.08;
+  margin: 0 0 18px;
+}
+
+.nutri-hero-support {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--apse-graphite-soft);
+  max-width: 46ch;
+  margin: 0 0 28px;
+}
+
+.nutri-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+
+.nutri-quick-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+  font-size: 14px;
+  color: var(--apse-graphite-soft);
+}
+
+.nutri-quick-points li { padding-left: 18px; position: relative; }
+.nutri-quick-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--apse-lime-deep);
+}
+
+.nutri-hero-visual {
+  position: relative;
+  padding: 0 16px 30px;
+}
+
+.nutri-mock-window { position: relative; }
+
+.nutri-mock-bar { display: flex; gap: 6px; padding: 10px 14px; }
+.nutri-mock-bar span { width: 8px; height: 8px; border-radius: 50%; background: var(--apse-line); }
+
+.nutri-mock-body {
+  background: var(--apse-off-white);
+  border-radius: var(--radius-md);
+  padding: 32px 24px 40px;
+}
+
+.nutri-mock-label { font-size: 13px; font-weight: 700; color: var(--apse-graphite-soft); margin: 0 0 14px; }
+
+.nutri-mock-heading {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.28;
+  margin: 0 0 22px;
+  max-width: 22ch;
+}
+
+.nutri-mock-cta { font-size: 14px; padding: 12px 20px; }
+
+.nutri-float-card {
+  position: absolute;
+  bottom: 0;
+  left: 36px;
+  padding: 12px 16px;
+  max-width: 200px;
+}
+
+.nutri-float-card strong { display: block; font-size: 13px; }
+.nutri-float-card span { display: block; font-size: 12px; color: var(--apse-graphite-soft); margin-top: 2px; }
+
+@media (min-width: 900px) {
+  .nutri-hero {
+    flex-direction: row;
+    align-items: center;
+    padding: 60px 40px 100px;
+    gap: 56px;
+  }
+  .nutri-hero-copy { flex: 1.1; }
+  .nutri-hero-visual { flex: 0.9; }
+}
+
+/* Comparativo problema/solução */
+.nutri-comparativo { padding-top: 8px; }
+
+.nutri-lead {
+  font-size: 15px;
+  color: var(--apse-graphite-soft);
+  margin: 0 0 32px;
+}
+
+.nutri-comparison { display: grid; gap: 16px; }
+
+.nutri-comparison-col { padding: 28px; }
+.nutri-comparison-col h3 { font-size: 16px; line-height: 1.4; margin: 0 0 20px; }
+.nutri-comparison-good { border-color: var(--apse-lime-deep); }
+
+.nutri-comparison-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.nutri-comparison-col li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--apse-graphite-soft);
+  line-height: 1.5;
+}
+
+.nutri-mark {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 1px;
+}
+.nutri-mark-x { background: var(--apse-off-white); color: var(--apse-graphite-faint); }
+.nutri-mark-ok { background: var(--apse-lime); color: var(--apse-graphite); }
+
+@media (min-width: 720px) {
+  .nutri-comparison { grid-template-columns: 1fr 1fr; }
+}
+
+/* Grades compartilhadas */
+.nutri-grid { display: grid; gap: 14px; }
+.nutri-grid-3 { grid-template-columns: 1fr; }
+
+@media (min-width: 720px) {
+  .nutri-grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+.nutri-structure-card { padding: 26px; }
+.nutri-structure-card h3 { font-size: 16px; margin: 0 0 8px; }
+.nutri-structure-card p { font-size: 14px; color: var(--apse-graphite-soft); margin: 0; line-height: 1.5; }
+
+/* Exemplo de estrutura */
+.nutri-example-card { display: flex; flex-direction: column; gap: 10px; }
+.nutri-example-preview { padding: 26px; min-height: 190px; display: flex; flex-direction: column; justify-content: center; }
+.nutri-example-preview p { margin: 0; font-size: 15px; font-weight: 600; line-height: 1.5; }
+.nutri-example-title { margin-bottom: 16px !important; }
+
+.nutri-example-chips { display: flex; flex-direction: column; gap: 8px; }
+.nutri-example-chips span {
+  background: var(--apse-off-white);
+  border: 1px solid var(--apse-line);
+  border-radius: var(--radius-pill);
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--apse-graphite-soft);
+}
+
+.nutri-example-form { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+.nutri-example-form span { height: 12px; border-radius: 6px; background: var(--apse-off-white); border: 1px solid var(--apse-line); }
+
+.nutri-example-caption { font-size: 13px; color: var(--apse-graphite-soft); text-align: center; }
+
+/* Preço */
+.nutri-preco { padding-top: 24px; padding-bottom: 80px; }
+
+.nutri-pricing-card {
+  background: var(--apse-graphite);
+  border-radius: var(--radius-lg);
+  padding: 40px 24px;
+  display: grid;
+  gap: 32px;
+}
+
+.nutri-pricing-text .section-eyebrow { color: var(--apse-lime); }
+.nutri-pricing-text h2 { color: var(--apse-white); font-size: 26px; margin: 0 0 22px; }
+
+.nutri-pricing-checklist { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.nutri-pricing-checklist li { color: rgba(255,255,255,0.78); font-size: 14px; padding-left: 22px; position: relative; }
+.nutri-pricing-checklist li::before { content: "✓"; position: absolute; left: 0; color: var(--apse-lime); font-weight: 700; }
+
+.nutri-pricing-box { background: var(--apse-white); border-radius: var(--radius-md); padding: 28px; text-align: center; }
+.nutri-pricing-label { display: block; font-size: 13px; color: var(--apse-graphite-soft); margin-bottom: 6px; }
+.nutri-pricing-value { display: block; font-family: var(--font-display); font-size: 36px; font-weight: 800; letter-spacing: -0.02em; }
+.nutri-pricing-note { display: block; font-size: 13px; color: var(--apse-graphite-soft); margin-bottom: 22px; }
+.nutri-pricing-cta { width: 100%; }
+
+@media (min-width: 720px) {
+  .nutri-pricing-card { grid-template-columns: 1.3fr 1fr; align-items: center; padding: 56px; }
+}
+
+/* Rodapé */
+.nutri-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--apse-graphite-soft);
+  border-top: 1px solid var(--apse-line);
+}

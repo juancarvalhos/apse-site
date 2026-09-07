@@ -1,6 +1,11 @@
 # Ápse
 
-Site comercial e landing page para a Ápse, um estúdio de sites e landing pages. Construído do zero em HTML, CSS e JavaScript puros, sem framework e sem dependência nenhuma.
+Site comercial da Ápse, um estúdio de sites e landing pages. Construído do zero em HTML, CSS e JavaScript puros, sem framework e sem dependência nenhuma.
+
+Este repositório reúne dois exemplos:
+
+- **Site comercial** (`/`, este README) — a presença institucional da Ápse.
+- **Landing page para nutricionistas** (`/nutricionista/`, [README próprio](nutricionista/README.md)) — exemplo do formato de venda por nicho.
 
 ## Destaques técnicos
 
