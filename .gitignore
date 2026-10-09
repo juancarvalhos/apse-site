@@ -2,3 +2,4 @@ node_modules/
 .playwright-mcp/
 *.yml
 _arquivo-local/
+automacao/n8n/_local/

@@ -12,3 +12,7 @@ Rodar localmente: `node server.mjs`, abre em `http://localhost:5000`.
 Repositório público: https://github.com/juancarvalhos/apse-site
 
 Use este repositório como referência de portfólio (exemplos reais de sites entregues e de landing page própria) ou como base técnica para novos projetos vanilla no mesmo estilo.
+
+## Operação comercial (n8n)
+
+`automacao/` contém os fluxos comerciais do n8n (qualificação, top 5, abordagens multilíngues com aprovação humana, respostas). Não faz parte dos sites. Ver [automacao/README.md](automacao/README.md) antes de mexer, inclusive a seção de coordenação entre agentes.

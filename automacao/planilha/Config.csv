@@ -1,0 +1,15 @@
+chave,valor,o que é
+responsavel_email,,Seu e-mail: recebe o resumo diário e os alertas de lead quente
+responsavel_nome,Juan Carvalho,Assinatura das mensagens
+empresa_nome,Ápse,Assinatura das mensagens
+empresa_site,,Opcional: aparece na assinatura
+planilha_url,,Link desta planilha (vai no resumo diário)
+top_n,5,Quantos leads novos priorizar por dia
+ticket_minimo,1500,Orçamento declarado abaixo disso perde pontos
+idioma_padrao,en,Idioma quando não dá para detectar (pt/en/es/fr/de/it)
+segmentos_alvo,,Vazio = lista padrão. Separe por vírgula
+paises_prioritarios,,Opcional: ex. Estados Unidos,Portugal,Espanha
+dias_cooldown,30,Não volta a abordar um lead antes disso
+cadencia_followup_dias,"3,7,14",Dias após o 1º contato para cada follow-up (máx. 3)
+dias_negociacao_parada,5,Avisa no resumo quando uma conversa fica parada
+max_envios_dia,20,Limite de e-mails enviados pelo n8n por dia
